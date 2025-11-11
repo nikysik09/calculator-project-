@@ -12,7 +12,7 @@ def divide(a, b):
 def power(a, b):
  return a ** b
 print("=== just kalkulator ===")
-print("u can: +, -, *, /, **")
+print("Операції: +, -, *, /, **, %")
 print("for exit type 'exit'")
 while True:
  operation = input("\nVedit operciu (+, -, *, /, **) or 'exit': ")
@@ -21,8 +21,7 @@ while True:
   print("goodbay!")
   break
 
- if operation not in ['+', '-', '*', '/', '**']:
-  print("False!")
+if operation not in [‘+’, ‘-’, ‘*’, ‘/’, ‘**’, ‘%’]:  print("False!")
   continue
 
  try:
@@ -39,8 +38,16 @@ while True:
    result = divide(num1, num2)
   elif operation == '**':
    result = power(num1, num2)
+elif operation == ‘%’:
+result = modulo(num1, num2)
 
   print(f"Result: {result}")
 
  except ValueError:
   print("False: write true numbers!")
+def modulo(a, b):
+
+ if b != 0:
+ return a % b
+ else:
+ return "Помилка: ділення на нуль!"
