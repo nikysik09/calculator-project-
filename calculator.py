@@ -1,38 +1,33 @@
 def add(a, b):
- """Додавання двох чисел"""
  return a + b
 def subtract(a, b):
- """Віднімання двох чисел"""
  return a - b
 def multiply(a, b):
- """Множення двох чисел"""
  return a * b
 def divide(a, b):
- """Ділення двох чисел"""
  if b != 0:
   return a / b
  else:
-  return "Помилка: ділення на нуль!"
+  return "pomulka!"
 def power(a, b):
- """Піднесення числа a до степеня b"""
  return a ** b
-print("=== Простий калькулятор ===")
-print("Операції: +, -, *, /, **")
-print("Для виходу введіть 'exit'")
+print("=== just kalkulator ===")
+print("u can: +, -, *, /, **")
+print("for exit type 'exit'")
 while True:
- operation = input("\nВведіть операцію (+, -, *, /, **) або 'exit': ")
+ operation = input("\nVedit operciu (+, -, *, /, **) or 'exit': ")
 
  if operation.lower() == 'exit':
-  print("До побачення!")
+  print("goodbay!")
   break
 
  if operation not in ['+', '-', '*', '/', '**']:
-  print("Невірна операція!")
+  print("False!")
   continue
 
  try:
-  num1 = float(input("Введіть перше число: "))
-  num2 = float(input("Введіть друге число: "))
+  num1 = float(input("Your first number: "))
+  num2 = float(input("Your second number: "))
 
   if operation == '+':
    result = add(num1, num2)
@@ -45,7 +40,7 @@ while True:
   elif operation == '**':
    result = power(num1, num2)
 
-  print(f"Результат: {result}")
+  print(f"Result: {result}")
 
  except ValueError:
-  print("Помилка: введіть коректні числа!")
+  print("False: write true numbers!")
